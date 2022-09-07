@@ -27,7 +27,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="36dp"
-        android:onClick="setNumber"
+        android:onClick="setNumberOnScreen"
         android:text="@string/btn_one"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_screen" />
@@ -38,7 +38,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="36dp"
-        android:onClick="setNumber"
+        android:onClick="setNumberOnScreen"
         android:text="@string/btn_two"
         app:layout_constraintStart_toEndOf="@+id/btn1"
         app:layout_constraintTop_toBottomOf="@+id/tv_screen" />
@@ -49,7 +49,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="36dp"
-        android:onClick="setNumber"
+        android:onClick="setNumberOnScreen"
         android:text="@string/btn_three"
         app:layout_constraintStart_toEndOf="@+id/btn2"
         app:layout_constraintTop_toBottomOf="@+id/tv_screen" />
@@ -60,7 +60,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
-        android:onClick="setNumber"
+        android:onClick="setNumberOnScreen"
         android:text="@string/btn_four"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn1" />
@@ -71,7 +71,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
-        android:onClick="setNumber"
+        android:onClick="setNumberOnScreen"
         android:text="@string/btn_five"
         app:layout_constraintStart_toEndOf="@+id/btn4"
         app:layout_constraintTop_toBottomOf="@+id/btn2" />
@@ -82,7 +82,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
-        android:onClick="setNumber"
+        android:onClick="setNumberOnScreen"
         android:text="@string/btn_six"
         app:layout_constraintStart_toEndOf="@+id/btn5"
         app:layout_constraintTop_toBottomOf="@+id/btn3" />
@@ -93,7 +93,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
-        android:onClick="setNumber"
+        android:onClick="setNumberOnScreen"
         android:text="@string/btn_seven"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn4" />
@@ -104,7 +104,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
-        android:onClick="setNumber"
+        android:onClick="setNumberOnScreen"
         android:text="@string/btn_eight"
         app:layout_constraintStart_toEndOf="@+id/btn7"
         app:layout_constraintTop_toBottomOf="@+id/btn5" />
@@ -115,7 +115,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
-        android:onClick="setNumber"
+        android:onClick="setNumberOnScreen"
         android:text="@string/btn_nine"
         app:layout_constraintStart_toEndOf="@+id/btn8"
         app:layout_constraintTop_toBottomOf="@+id/btn6" />
@@ -126,7 +126,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
-        android:onClick="setOperator"
+        android:onClick="setOperatorOnScreen"
         android:text="@string/btn_subtraction"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -139,7 +139,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="36dp"
-        android:onClick="setOperator"
+        android:onClick="setOperatorOnScreen"
         android:text="@string/btn_addition"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -152,7 +152,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
-        android:onClick="setOperator"
+        android:onClick="setOperatorOnScreen"
         android:text="@string/btn_multiplication"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -165,7 +165,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
-        android:onClick="setOperator"
+        android:onClick="setOperatorOnScreen"
         android:text="@string/btn_division"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -178,7 +178,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
-        android:onClick="setNumber"
+        android:onClick="setNumberOnScreen"
         android:text="@string/btn_zero"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn7" />
@@ -189,7 +189,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
-        android:onClick="setNumber"
+        android:onClick="setNumberOnScreen"
         android:text="@string/btn_dot"
         app:layout_constraintStart_toEndOf="@+id/btn0"
         app:layout_constraintTop_toBottomOf="@+id/btn8" />
@@ -200,7 +200,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
-        android:onClick="setNumber"
+        android:onClick="setNumberOnScreen"
         android:text="@string/btn_coma"
         app:layout_constraintStart_toEndOf="@+id/btn_dot"
         app:layout_constraintTop_toBottomOf="@+id/btn9" />
