@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -56,13 +57,13 @@ public class MainActivity extends AppCompatActivity {
 
         tv_screen.setText(tv_screen.getText() + numToSet); //setting number on screen
 
-        if(getOp() == "") {
-            if(getNum1() != 0) numToSet = String.valueOf(getNum1()) + numToSet; //num1 has some value in it
+        if(getOp().equals("")) {
+            if(getNum1() != 0) numToSet = NumberFormat.getInstance().format(getNum1()) + numToSet; //num1 has some value in it
             setNum1(Float.parseFloat(numToSet));
         } else {
-            if(getNum2() != 0) numToSet = String.valueOf(getNum2()) + numToSet; //num2 has some value in it
+            if(getNum2() != 0) numToSet = NumberFormat.getInstance().format(getNum2()) + numToSet; //num2 has some value in it
             setNum2(Float.parseFloat(numToSet));
-        };
+        }
 
     }
 
@@ -70,9 +71,16 @@ public class MainActivity extends AppCompatActivity {
         Button btn = (Button) view;
         String op = btn.getText().toString();
 
-        setOp(op); //setting global operator
+        if(getNum2() != 0) {
+            calculate();
+        }
 
-        tv_screen.setText(tv_screen.getText() + " " + op + " ");
+        if(!getOp().equals("")) {
+            replaceOp(op);
+        } else {
+            tv_screen.setText(tv_screen.getText() + " " + op + " ");
+        }
+        setOp(op); //setting global operator
     }
 
     private void onAfterOp(float newNumber) {
@@ -81,32 +89,43 @@ public class MainActivity extends AppCompatActivity {
         setOp("");
     }
 
-    public void calculate (View view) {
+    private void replaceOp (String op) {
+        String expression = tv_screen.getText().toString();
+        String[] arrayEx = expression.split(" ");
+        arrayEx[1] = op;
+        tv_screen.setText(arrayEx[0] + " " + arrayEx[1] + " ");
+    }
+
+    private void calculate() {
         float newNumber;
         switch (getOp()) {
             case "+":
                 newNumber = getNum1() + getNum2();
-                tv_screen.setText(String.valueOf(newNumber));
+                tv_screen.setText(NumberFormat.getInstance().format(newNumber));
                 onAfterOp(newNumber);
                 break;
             case "-":
                 newNumber = getNum1() - getNum2();
-                tv_screen.setText(String.valueOf(newNumber));
+                tv_screen.setText(NumberFormat.getInstance().format(newNumber));
                 onAfterOp(newNumber);
                 break;
             case "*":
                 newNumber = getNum1() * getNum2();
-                tv_screen.setText(String.valueOf(newNumber));
+                tv_screen.setText(NumberFormat.getInstance().format(newNumber));
                 onAfterOp(newNumber);
                 break;
             case "/":
                 newNumber = getNum1() / getNum2();
-                tv_screen.setText(String.valueOf(newNumber));
+                tv_screen.setText(NumberFormat.getInstance().format(newNumber));
                 onAfterOp(newNumber);
                 break;
             default:
                 break;
         }
+    }
+
+    public void handleEqualsButton(View view) {
+       calculate();
     }
 
 }
